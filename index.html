@@ -1,0 +1,91 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<script>
+let i=0;
+function nxt()
+{
+p=document.getElementById("content");
+lq=document.getElementById("lq");
+rq=document.getElementById("rq");
+author=document.getElementById("author");
+twit=document.getElementById("twit");
+tw=document.getElementById("tw");
+b1=document.getElementById("b1");
+bg=document.getElementById("bg");
+
+
+a=["Every child is an artist. The problem is how to remain an artist once he grows up. ","Limitations live only in our minds. But if we use our imaginations. ","You can’t fall if you don’t climb. But there’s no joy in living your whole life on the ground. ","An unexamined life is not worth living. ","I didn’t fail the test. I just found 100 ways to do it wrong. "];
+b=["#73A857","#E74C3C","#BDBB99","#16A085","#77B1A9"];
+c=["- Les Brown","- Buddha","- Vince Lombardi","- John Lennon","- Farrah Gray"];
+p.style.color=b[i];
+lq.style.color=b[i];
+rq.style.color=b[i];
+author.textContent=c[i];
+author.style.color=b[i];
+bg.style.backgroundColor=b[i];
+twit.style.backgroundColor=b[i];
+tw.style.backgroundColor=b[i];
+b1.style.backgroundColor=b[i];
+
+p.textContent = a[i];
+i++;
+if(i==a.length&&i==b.length&&i==c.length)
+{
+i=0;
+}
+}
+</script>
+
+<style>
+body{
+background:#00A170;
+}
+#twit{
+font-size:30px;
+padding:8px 18px 8px 18px;
+  font-family: "Lobster", sans-serif;
+font-weight:bold;
+border-radius:5px;
+}
+.newic{
+padding:10px;
+border-radius:5px;
+}
+div{
+background:white;
+width:550px;
+height:340px;
+margin:200px 0px 0px 500px;
+border-radius:5px;
+padding:20px 20px 20px 20px;
+}
+p{
+ font-family: "Josefin Sans", sans-serif;
+ font-size:35px;
+ text-align:center;
+
+}
+#author{
+font-family: "Josefin Sans", sans-serif;
+ font-size:20px;
+}
+</style>
+</head>
+<body id="bg">
+<div>
+	<p><i class="fa fa-quote-left" style="font-size:30px" id="lq"></i>
+<span id="content" style="height:300px;width:500px;">Certain things catch your eye, but pursue only those that capture the heart.</span><i class="fa fa-quote-right" style="font-size:30px" id="rq"></i>
+</p>
+	<span style="float:right" id="author">- Zig Ziglar</span><br><br><br>
+	<i class="fa fa-twitter newic" style="font-size:30px;" id="tw"></i>
+	<span id="twit">t</span>
+	<input type="button" id="b1" class="btn btn-primary" value="New Quote" style="float:right" onclick="nxt()">
+</div>
+</body>
+</html>
